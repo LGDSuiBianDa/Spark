@@ -1,4 +1,4 @@
-package com.sf.spark.streaming
+package com.yd.spark.streaming
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.streaming.{Seconds, State, StateSpec, StreamingContext}
@@ -26,7 +26,6 @@ object SparkStreamingWordCount {
       // batchDuration 设置为 1 秒，然后创建一个 streaming 入口
       val sc = new SparkContext(conf)
       sc.setLogLevel("WARN")
-      sc.setLogLevel("ERROR")
       val ssc = new StreamingContext(sc, Seconds(30))
       ssc.checkpoint(checkpointDir)
 
@@ -35,15 +34,7 @@ object SparkStreamingWordCount {
 
       val words = lines.flatMap(_.split(" "))      // DStream transformation
 
-      val pairs = words.map{line=>
-        var seMap = collection.mutable.Map[String,String]()
-        val random =scala.util.Random.nextInt.toString
-        val state=if(random.toLong>0) "doing" else "finish"
-        seMap += ("uid" -> random.toString)
-        seMap += ("name" -> line)
-        seMap += ("state" -> state)
-        (line,seMap)
-      }     // DStream transformation
+      val pairs = words.map(word => (word, 1))
       //    val wordCounts = pairs.reduceByKey(_ + _)    // DStream transformation
 
       val mappingFunc = (word: String, count: Option[Int], state: State[Int]) => {
@@ -57,7 +48,7 @@ object SparkStreamingWordCount {
         }
       }
 
-      val stateDstream = pairs.mapWithState(StateSpec.function(mappingFunc1).timeout(Seconds(60)))
+      val stateDstream = pairs.mapWithState(StateSpec.function(mappingFunc).timeout(Seconds(60)))
       
       /**
         * checkpoint间隔一般设置为batchtime的5~10倍
