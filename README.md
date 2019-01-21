@@ -10,7 +10,11 @@ Spark summary：
 
 
 流处理Streaming：
+
+
 streaming需要具备的特点：
+
+
 1.低延迟;
 2.一致性语义保证(end-to-end exactly-once);
 3.吞吐量;
@@ -19,7 +23,11 @@ streaming需要具备的特点：
 
 
 Streaming发展简史：
+
+
 1.Storm是整个行业真正广泛采用的第一个流式处理系统：
+
+
 1).满足低延迟;
 2).弱一致性.
 2.Spark streaming发布于2013年，它是流处理的分水岭，第一个公开可用的流处理引擎，可以提供批处理系统的正确性保证：
@@ -32,12 +40,16 @@ Streaming发展简史：
 2).可重放.
 大量流处理引擎依赖源头数据可重放来提供end-to-end exactly-once的计算保障
 
+
 4.Flink在2015年突然出现在大数据舞台，它在不断提高整个行业的流计算处理标准：
+
+
 1).低延迟
 2).一致性语义保证 （end-to-end exactly-once）: Barrier
 3).吞吐量
 4).乱序数据(Watermark)
 5).持久化的状态存储(snapshot、Savepoints)
+
 
 趋势：
 批量和流式编程模型统一，简单易用，流处理逐渐代替批处理
