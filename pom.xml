@@ -15,6 +15,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <org.slf4j.version>1.6.6</org.slf4j.version>
         <protostuff.version>1.0.5</protostuff.version>
+        <org.apache.spark.version>2.4.0</org.apache.spark.version>
     </properties>
 
     <build>
@@ -117,8 +118,7 @@
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
-            <version>2.2.0</version>
+            <artifactId>spark-sql_2.12</artifactId>
             <exclusions>
                 <exclusion>
                     <artifactId>*</artifactId>
@@ -132,8 +132,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming_2.11</artifactId>
-            <version>2.2.0</version>
+            <artifactId>spark-streaming_2.12</artifactId>
             <exclusions>
                 <exclusion>
                     <artifactId>*</artifactId>
@@ -143,8 +142,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
-            <version>2.2.0</version>
+            <artifactId>spark-core_2.12</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.avro</groupId>
@@ -160,7 +158,6 @@
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
-            <version>2.2.0</version>
             <exclusions>
                 <exclusion>
                     <artifactId>*</artifactId>
