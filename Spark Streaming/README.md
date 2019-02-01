@@ -6,7 +6,7 @@
 no matter train a model or build a streaming task , EDA (Exploratory Data Analysis) is one of the basic and necessary step among the streaming pipeline.
 
 
-3.业务逻辑（这一步包含了数据清洗、转换以及具体的计算逻辑，当然也可以是更加复杂的模型）
+3.业务逻辑（这一步包含了数据清洗、转换以及具体的计算逻辑，当然也可以加入更加复杂的模型）
 
 
 4.结果存储（将计算得到的结果持久化）
