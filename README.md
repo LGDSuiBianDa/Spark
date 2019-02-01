@@ -1,5 +1,5 @@
 # Spark
-本地搭建spark开发环境(主要包含以下五步)：
+本地搭建spark开发环境(主要包含以下六步)：
 
 
 1.下载安装JDK1.8并配置环境变量(%JAVA_HOME%\bin 和 %JAVA_HOME%\jre\bin)；
