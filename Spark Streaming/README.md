@@ -3,7 +3,7 @@
 
 
 2.探索性数据分析（一般来说如果你清楚地知道当前已有数据的结构，那么后续的分析或计算是水到渠成的；但是如果不知道当前已有数据的结构，就需要进行探索性数据分析）
-no matter train a model or build a streaming task , EDA (Exploratory Data Analysis) is one of the basic and necessary step among the streaming pipeline.
+no matter train a model or build a streaming task , EDA (Exploratory Data Analysis) is one of the basic and necessary step among the streaming or ML pipeline.
 
 
 3.业务逻辑（这一步包含了数据清洗、转换以及具体的计算逻辑，当然也可以加入更加复杂的模型）
