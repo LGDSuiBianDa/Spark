@@ -17,8 +17,9 @@ no matter train a model or build a streaming task , EDA (Exploratory Data Analys
 
 # 开发一个streaming任务不是什么特别困难的事情，如何保证你的streaming任务结果准确，并且可以7*24不间断提供服务，这无疑是比较有挑战的：
 1.结果准确性可以通过如下方法验证：
-windows环境下的socket nc  测试小工具nc -L -p 9999  在windows本地 进行测试，发送socket包到spark streaming.
+1).使用windows环境下的socket nc  测试小工具nc -L -p 9999  在windows本地 进行测试，发送socket包到spark streaming,验证逻辑准确性.
 执行 nc -L -p 9999 -v ,手工输入数据,或者导入一个文件(nc -L -p 9999 -v < G:\test_data\part-00000).
+2).基于相同逻辑的离线版本跟实时版本结果对比
 
 
 2.7*24不间断提供服务通过checkpoint来异常恢复
