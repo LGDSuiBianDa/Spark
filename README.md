@@ -1,4 +1,4 @@
-# Spark
+# Spark summary：
 # 本地搭建spark开发环境(主要包含以下六步)：
 
 
@@ -19,9 +19,6 @@
 
 6.下载安装IDEA，首次启动之后需要先安装scala插件。安装完成后重启IDEA，否则无法配置全局scala SDK。配置好SDK(1.8)和global library(scala-sdk-2.11.12)之后就可以创建一个Maven项目，然后打包(mvn package打包)上传到集群上，提交任务(spark-submit)，你的代码就可以在集群上运行了，通过spark UI可以查看执行情况。
 
-
-
-# # # Spark summary：
 
 
 
