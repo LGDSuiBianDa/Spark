@@ -5,13 +5,13 @@
 # kafka的broker zk路径
 kafkaspout.broker.zkroot=/brokers/ids
 
-# 大数据平台kafka other集群 zk路径
+# kafka other集群 zk路径
 kafka.zkservers.other=host:port
 
-# 大数据平台kafka other集群 broker地址
+# kafka other集群 broker地址
 kafka.brokers.other=host:port
 
-# 大数据平台kafka topic
+# kafka topic
 topic.other=topic_name
 
 # es config
