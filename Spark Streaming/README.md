@@ -7,6 +7,7 @@ no matter train a model or build a streaming task , EDA (Exploratory Data Analys
 
 
 3.流处理编程模型
+图片 2.png
 这一步包含如下事项：
 (1).一系列转换操作;
 (2).状态管理;
@@ -19,7 +20,7 @@ no matter train a model or build a streaming task , EDA (Exploratory Data Analys
 
 5.部署
 
-
+图片 1.png
 
 
 # 开发一个streaming任务不是什么特别困难的事情，如何保证你的streaming任务结果准确，并且可以7*24不间断提供服务，这无疑是比较有挑战的：
