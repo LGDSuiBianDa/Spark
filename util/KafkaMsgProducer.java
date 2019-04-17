@@ -13,7 +13,7 @@ import java.util.Properties;
   * Created by suibianda LGD  on 2019/4/17 17:38
   * Modified by: 
   * Version: 0.0.1
-  * Usage: kafka producer工具类
+  * Usage: kafka message producer工具类
   *
   */
 public class KafkaMsgProducer {
