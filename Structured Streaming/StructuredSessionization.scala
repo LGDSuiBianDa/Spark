@@ -19,7 +19,7 @@ import org.apache.spark.sql.streaming._
   * `$ bin/run-example sql.streaming.StructuredSessionization
   * localhost 9999`
   */
-object streamingTest {
+object StructuredSessionization {
 
   def main(args: Array[String]): Unit = {
 //    if (args.length < 2) {
