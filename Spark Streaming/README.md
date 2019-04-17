@@ -6,13 +6,20 @@
 no matter train a model or build a streaming task , EDA (Exploratory Data Analysis) is one of the basic and necessary step among the streaming or ML pipeline.
 
 
-3.业务逻辑（这一步包含了数据清洗、转换以及具体的计算逻辑，当然也可以加入更加复杂的模型）
+3.流处理编程模型
+这一步包含如下事项：
+(1).一系列转换操作;
+(2).状态管理;
+(3).输出操作（output sink、output mode）---输出介质和输出模式的确定;
+上述3点一般适用于普通实时任务，当然实时任务中还可以加入模型来做预测。
 
 
-4.结果存储（将计算得到的结果持久化）
+5.准确性验证（如果第三步包含了模型，那么除了验证准确性之外，还需要分析验证模型的预测结果）
 
 
-5.准确性验证（如果第三步包含了模型，则对应模型调优及评价）
+6.部署
+
+
 
 
 # 开发一个streaming任务不是什么特别困难的事情，如何保证你的streaming任务结果准确，并且可以7*24不间断提供服务，这无疑是比较有挑战的：
