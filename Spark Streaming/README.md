@@ -8,10 +8,15 @@ no matter train a model or build a streaming task , EDA (Exploratory Data Analys
 
 3.流处理编程模型
 图片 2.png
+
 这一步包含如下事项：
+
 (1).一系列转换操作;
+
 (2).状态管理;
+
 (3).输出操作（output sink、output mode）---输出介质和输出模式的确定;
+
 上述3点一般适用于普通实时任务，当然实时任务中还可以加入模型来做预测。
 
 
