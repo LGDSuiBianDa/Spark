@@ -13,3 +13,6 @@ spark权威指南 https://github.com/databricks/Spark-The-Definitive-Guide
 深度学习 http://www.deeplearningbook.org/
 
 样本不平衡问题：https://elitedatascience.com/imbalanced-classes or  https://github.com/xitu/gold-miner/blob/master/TODO/how-to-handle-imbalanced-classes-in-machine-learning.md 更多细节参考tkde上的文章Learning from Imbalanced Data
+
+
+spark bolg https://mapr.com/blog/author/carol-mcdonald/
