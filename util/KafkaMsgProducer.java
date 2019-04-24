@@ -21,7 +21,7 @@ public class KafkaMsgProducer {
     // Declare a new producer
     public static KafkaProducer producer;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException,InterruptedException {
 
         // Set the default stream and topic to publish to.
         String topic = PropertiesLoader.getInstance().getProperty("topic.name");
@@ -43,6 +43,7 @@ public class KafkaMsgProducer {
 
             // Send the record to the producer client library.
             producer.send(rec);
+            Thread.sleep(5000);
             System.out.println("Sent message: " + line);
             line = reader.readLine();
 
@@ -59,7 +60,9 @@ public class KafkaMsgProducer {
      This configuration parameter specifies which class
      to use to serialize the value of each message.*/
     public static void configureProducer() {
+        String brokers = PropertiesLoader.getInstance().getProperty("kafka.brokers");
         Properties props = new Properties();
+        props.put("bootstrap.servers",brokers);
         props.put("key.serializer",
                 "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer",
