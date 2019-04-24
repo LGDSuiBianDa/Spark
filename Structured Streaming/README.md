@@ -2,7 +2,7 @@
 
 
 
-# 一、Streaming发展简史：
+## 一、Streaming发展简史：
 1.Storm是整个行业真正广泛采用的第一个流式处理系统：
 
 
@@ -57,7 +57,7 @@
 5).持久化的状态存储(snapshot、Savepoints)
 
 
-# 二、streaming需要具备的特点：
+## 二、streaming需要具备的特点：
 1.低延迟;
 
 
@@ -73,13 +73,13 @@
 5.持久化的状态存储.
 
 
-# 三、streaming趋势：
+## 三、streaming趋势：
 批量和流式编程模型统一，简单易用，流处理逐渐代替批处理
 
 
-## 总结：
+# # 总结：
 
-# streaming流处理的一般过程包括以下几步：
+## streaming流处理的一般过程包括以下几步：
 1.实时数据源接入（一般来源是kafka，本地可以用socket nc  测试小工具发送数据到spark streaming,来验证计算逻辑准确性）
 
 
@@ -109,7 +109,7 @@ no matter train a model or build a streaming task , EDA (Exploratory Data Analys
 图片 1.png
 
 
-# 开发一个streaming任务不是什么特别困难的事情，如何保证你的streaming任务结果准确，并且可以7*24不间断提供服务，这无疑是比较有挑战的：
+## 开发一个streaming任务不是什么特别困难的事情，如何保证你的streaming任务结果准确，并且可以7*24不间断提供服务，这无疑是比较有挑战的：
 1.开发阶段的结果准确性可以通过如下方法验证：
 
 1).使用windows环境下的socket nc  测试小工具nc -L -p 9999  在windows本地 进行测试，发送socket包到spark streaming,验证逻辑准确性.
@@ -120,6 +120,7 @@ no matter train a model or build a streaming task , EDA (Exploratory Data Analys
 (1).启动zookeeper、Kafka
 
 brew services start zookeeper
+
 brew services start kafka
 首次需要先创建topic
 kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic ITMS_CHILD_PARENT_SCHEDULE
@@ -136,6 +137,7 @@ kafka-console-producer --broker-list localhost:9092 --topic ITMS_CHILD_PARENT_SC
 (4).关闭zookeeper、Kafka
 
 brew services stop zookeeper
+
 brew services stop kafka
 
 3).基于相同逻辑的离线版本跟实时版本结果对比
