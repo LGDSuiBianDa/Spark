@@ -10,8 +10,8 @@ import org.apache.spark.sql.functions._
 /**
   * @ClassName: PredictWithDecisionTree
   * @Description:
-  * @Usage:
-  * @Auther: 
+  * @Usage: DecisionTree classification on iris data 
+  * @Auther: suibianda LGD
   * @Date: 2019/4/24 下午4:33
   * @version : V1.0
   */
