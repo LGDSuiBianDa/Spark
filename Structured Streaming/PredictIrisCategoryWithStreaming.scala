@@ -22,7 +22,7 @@ import org.apache.log4j.{Level, LogManager, Logger}
   * Example:
   *     $  spark-submit --class com.sparkkafka.flight.SparkKafkaConsumerProducer --master local[2] \
   * dataExplore-1.0.jar /user/user01/data/savemodel  topicssubscribe topicspublish
-  * @Auther: 
+  * @Auther:suibianda LGD
   * @Date: 2019/4/25 下午6:00
   * @version : V1.0
   */
