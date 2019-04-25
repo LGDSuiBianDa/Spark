@@ -1,7 +1,7 @@
 package com.yd.spark.stream
 
 
-import com.sf.spark.util.PropertiesLoader
+import com.yd.spark.util.PropertiesLoader
 import org.apache.kafka.common.serialization.ByteArrayDeserializer
 import org.apache.spark.ml.tuning._
 import org.apache.spark.sql._
