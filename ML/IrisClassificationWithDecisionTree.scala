@@ -7,6 +7,7 @@ import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorAssemble
 import org.apache.spark.ml.tuning.{CrossValidator, ParamGridBuilder}
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types._
 /**
   * @ClassName: PredictWithDecisionTree
   * @Description:
@@ -18,6 +19,14 @@ import org.apache.spark.sql.functions._
 object IrisClassificationWithDecisionTree {
 
   case class Iris(sepalLength:Double, sepalWidth:Double, petalLength:Double, petalWidth:Double, category:String)
+ 
+  val schema = StructType(Array(
+    StructField("sepalLength", DoubleType, true),
+    StructField("sepalWidth", DoubleType, true),
+    StructField("petalLength", DoubleType, true),
+    StructField("petalWidth", DoubleType, true),
+    StructField("category", StringType, true)
+  ))
 
   def main(args: Array[String]): Unit = {
 
@@ -25,16 +34,19 @@ object IrisClassificationWithDecisionTree {
     spark.sparkContext.setLogLevel("WARN")
     import spark.implicits._
     val file = "/Users/iris.data" 
-    val data = spark.sparkContext.textFile(file).
-      map{line=>
-        val fields = line.split(",")
-        val sl = fields(0).toDouble
-        val sw = fields(1).toDouble
-        val pl = fields(2).toDouble
-        val pw = fields(3).toDouble
-        val category = fields(4).split("-")(1)
-        Iris(sl,sw,pl,pw,category)
-      }.toDF()
+//     val data = spark.sparkContext.textFile(file).
+//       map{line=>
+//         val fields = line.split(",")
+//         val sl = fields(0).toDouble
+//         val sw = fields(1).toDouble
+//         val pl = fields(2).toDouble
+//         val pw = fields(3).toDouble
+//         val category = fields(4).split("-")(1)
+//         Iris(sl,sw,pl,pw,category)
+//       }.toDF()
+    val data = spark.read.option("delimiter",",")
+    .option("inferSchema","true").schema(schema)
+    .csv("file")
     data.printSchema()
     data.createOrReplaceTempView("iriss")
     println("total records: "+data.count())
