@@ -1,4 +1,4 @@
-#加载配置文件注意事项：
+# 加载配置文件注意事项：
 配置文件一般放在src/main/resources文件夹下，针对不同类型的配置文件spark有不同方式来读取：
 
 1.key-value类型的配置，一般为.properties文件
