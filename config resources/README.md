@@ -22,7 +22,7 @@ area_mapping.value.getOrElse()
 
 需要注意的是，上述方式maven pom文件<build></build>里要加上下面内容
 
-<resources>
+"<resources>
       <resource>
         <directory>src/main/resources</directory>
         <includes>
@@ -32,4 +32,4 @@ area_mapping.value.getOrElse()
         </includes>
         <filtering>true</filtering>
       </resource>
- </resources>
+ </resources>"
