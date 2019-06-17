@@ -4,3 +4,8 @@ spark ml demo
 (involves analysis on historical data to build the machine learning model)
 
 2.uses the model in production on live events(streaming process)
+
+
+
+spark ml demo reference:
+https://github.com/caroljmcdonald/spark-ml-flightdelay
