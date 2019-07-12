@@ -12,8 +12,8 @@ import org.apache.spark.ml.feature._
 /**
   * @ClassName: UberLocationCluster
   * @Description:
-  * @Usage:
-  * @Auther: LGD suibianda
+  * @Usage: use KMeans to cluster the uber location
+  * @Auther: suibianda LGD 
   * @Date: 2019/7/9 下午3:52
   * @version : V1.0
   */
