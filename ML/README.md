@@ -1,4 +1,4 @@
-spark ml demo 
+# 如何在流处理中构建模型
 
 1.construct a machine learning pipieline offline
 (involves analysis on historical data to build the machine learning model)
@@ -9,3 +9,7 @@ spark ml demo
 
 spark ml demo reference:
 https://github.com/caroljmcdonald/spark-ml-flightdelay
+
+
+Machine Learning Logistics - Model Management in the Real World （eBook）:
+https://mapr.com/ebook/machine-learning-logistics/
