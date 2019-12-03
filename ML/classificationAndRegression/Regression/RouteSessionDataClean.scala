@@ -23,14 +23,14 @@ object RouteSessionDataClean {
     StructField("cons", StringType, true),
     StructField("currentaction", IntegerType, true),
     StructField("status", IntegerType, true),
-    StructField("scantm", LongType, true),
+    StructField("optm", LongType, true),
     StructField("location", StringType, true),
     StructField("otherinfo", StringType, true),
     StructField("opattachinfo", StringType, true),
-    StructField("scandt", StringType, true)
+    StructField("opdt", StringType, true)
   ))
 
-  case class Route(id:String,limit_code:String,	cargo_code:String,	product_code:String,cons:String,currentaction:Int,	status:Int,	scantm:Long,location:String,otherinfo:String,opattachinfo:String,scandt:String) extends Serializable
+  case class Route(id:String,limit_code:String,	cargo_code:String,	product_code:String,cons:String,currentaction:Int,	status:Int,	optm:Long,location:String,otherinfo:String,opattachinfo:String,opdt:String) extends Serializable
 
   case class Exp(
                       id:String,
