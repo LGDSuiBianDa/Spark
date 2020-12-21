@@ -12,7 +12,6 @@ import java.util.{Calendar, Date}
   */
 object DateUtil extends Serializable {
 
-
   /**
     * 获取当前系统时间，时间格式为：yyyy-MM-dd HH:mm:ss.SSS
     * @return yyyy-MM-dd HH:mm:ss.SSS
@@ -20,8 +19,17 @@ object DateUtil extends Serializable {
   def getNowDate:String={
     val now = new Date()
     now.getTime
-    val dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
+    val dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     val result = dateFormat.format( now )
+    result
+  }
+  /**
+    * 获取当前系统时间戳
+    * @return Long
+    */
+  def getNowTimeLong:Long={
+    val now = new Date()
+    val result = now.getTime
     result
   }
 
@@ -69,6 +77,12 @@ object DateUtil extends Serializable {
     cal.add(Calendar.DATE, - interval)
     val yesterday = dateFormat.format(cal.getTime)
     yesterday
+  }
+
+  def getDatesBefore(date:String,interval: Int):String={
+    val fm = new SimpleDateFormat("yyyyMMdd")
+    val dt = fm.parse(date)
+    getDaysBefore(dt,interval)
   }
 
   /**
@@ -123,9 +137,22 @@ object DateUtil extends Serializable {
     * @param tm
     * @return
     */
-  def tranTimeToString(tm:String) :String={
+  def tranTimeToString(tm:Long) :String={
     val fm = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-    val tim = fm.format(new Date(tm.toLong))
+    val tim = fm.format(new Date(tm))
     tim
+  }
+
+  /**
+    * 根据时间戳获取 DAY_OF_WEEK
+    * @param tm
+    * @return
+    */
+  def getWeek(tm:Long): Int ={
+    val cal: Calendar = Calendar.getInstance()
+    cal.setTimeInMillis(tm)
+    val o = cal.get(Calendar.DAY_OF_WEEK)
+    val week = if(o==Calendar.SUNDAY) 7 else o-1
+    week
   }
 }
