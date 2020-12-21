@@ -296,6 +296,7 @@ class SecondaryTimeWithANN {
 
     //load model weights and intercept
 //    logger.info(s"load model parameters:")
+//    val p_model=LogisticRegressionModel.load(sc,"hdfs://xxx//xxx")
 
     val intercept=ShardRedisProxyUtils.get("model_intercept").toDouble
     val weight = ShardRedisProxyUtils.hgetAll("model_weights")
